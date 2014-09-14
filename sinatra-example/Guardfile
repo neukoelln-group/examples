@@ -1,0 +1,9 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+# Reload the server on source changes
+guard 'rack', :port => 4444 do
+  watch(%r{app\.rb})
+  watch %r{lib/config/.*\.yml}
+  watch 'config.ru'
+end
